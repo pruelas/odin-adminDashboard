@@ -1,0 +1,32 @@
+html{
+    background-color: khaki;
+    height: 100%;
+}
+body{
+    height: inherit;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "sidebar header header header header header "
+                        "sidebar main-content main-content main-content  main-content main-content "
+                        "sidebar main-content main-content main-content  main-content main-content "
+                        "sidebar main-content main-content main-content  main-content main-content "
+                        "sidebar main-content main-content main-content  main-content main-content ";
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: blue;
+    /* grid-row: 1 / 6; */
+}
+
+.header{
+    grid-area: header;
+    background-color: cornsilk;
+    /* grid-area: 2 / 5 / 1 / 2; */
+}
+
+.main-content{
+    grid-area:main-content;
+    background-color: rgb(218, 218, 218);
+}
