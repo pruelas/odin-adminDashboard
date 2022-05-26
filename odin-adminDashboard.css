@@ -16,14 +16,64 @@ body{
 
 .sidebar{
     grid-area: sidebar;
-    background-color: blue;
+    display: grid;
+    grid-template-rows: 8em;
+    grid-auto-rows: minmax(min-content, max-content);
+    /* grid-template-rows: 8em repeat(auto-fit, minmax(300px, 1fr)); */
+    background-color: #38BDF8;
     /* grid-row: 1 / 6; */
+    color: white;
+    padding-left: 1em;
+    gap: 40px;
+}
+svg{
+    /* border: solid black; */
+    vertical-align: middle;
+}
+.dashBoard{
+    border: solid black 1px;
+    font-size: 1.2em;;
+    /* padding-left: 1em; */
+    justify-self: left;
+    align-self: center;
+}
+
+.navigation{
+    /* padding-left: 1em; */
+    border: solid black 1px;
+    display: grid;
+    justify-content:left;
+    align-self:stretch;
+    gap: 2rem;
+}
+
+.branding{
+    /* padding-left: 1em; */
+    border: solid black 1px;
+    display: grid;
+    justify-content:left;
+    align-self: stretch;
+    gap: 2rem;
 }
 
 .header{
     grid-area: header;
     background-color: cornsilk;
     /* grid-area: 2 / 5 / 1 / 2; */
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    
+}
+
+.searchBar{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-self: center;
+}
+
+.header2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .main-content{
