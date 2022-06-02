@@ -5,20 +5,17 @@
  }
 
 html{
-    background-color: khaki;
     height: 100%;
     width: 100%;
     font-family: 'Roboto', sans-serif;
-/*     box-sizing: border-box;
-    -moz-box-sizing: border-box;  */
 }
+
 body{
-/*     display: inline-block;
- */    height: inherit;
+    height: inherit;
     width: inherit;
     display: grid;
     grid-template-columns: 240px  1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows:  .8fr repeat(4, 1fr);
     grid-template-areas: "sidebar header "
                         "sidebar main-content "
                         "sidebar main-content "
@@ -31,9 +28,7 @@ body{
     display: grid;
     grid-template-rows: 8em;
     grid-auto-rows: minmax(min-content, max-content);
-    /* grid-template-rows: 8em repeat(auto-fit, minmax(300px, 1fr)); */
     background-color: #26a4da;
-    /* grid-row: 1 / 6; */
     color: white;
     padding-left: 1em;
     gap: 50px;
@@ -46,16 +41,12 @@ svg{
 }
 
 .dashBoard{
-    /* border: solid black 1px; */
     font-size: 1.4em;;
-    /* padding-left: 1em; */
     justify-self: left;
     align-self: center;
 }
 
 .navigation{
-    /* padding-left: 1em; */
-    /* border: solid black 1px; */
     display: grid;
     justify-content:left;
     align-self:stretch;
@@ -64,13 +55,22 @@ svg{
 }
 
 .branding{
-    /* padding-left: 1em; */
-    /* border: solid black 1px; */
     display: grid;
     justify-content:left;
     align-self: stretch;
     font-size: 1.1em;
     gap: 2rem;
+}
+
+.navigation svg{
+    height: 1.3em !important; 
+    width: 1.3em !important;
+    padding-top: .3em;
+}
+
+.branding svg{
+    height: 1.3em !important; 
+    width: 1.3em !important;
 }
 
 .branding div:hover, .navigation div:hover{
@@ -80,36 +80,30 @@ svg{
 .header{
     grid-area: header;
     background-color: rgb(255, 255, 255);
-    /* grid-area: 2 / 5 / 1 / 2; */
     display: grid;
-    grid-template-rows: 1fr 1.5fr;
+    grid-template-rows: .5fr .5fr;
 }
 
 .topHeader{
-    box-sizing: border-box; 
     display: flex;
-    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
-    border: rgb(0, 0, 0) solid;
-    /* height: 100%; */
-    /* max-width: 100%; */
     font-size: 1em;
-    /* align-items: center; */
     align-items: center;
     justify-content: space-between;
     padding-left: 3em;
 }
 
+.topHeader div svg{
+    height: 2em !important;
+    width: 2em !important;
+}
 .searchBar{
     width: 100%;
-    border: orange solid 2px;
 }
 
 .search{
-    box-sizing: border-box;
     border-radius: 10px;
     border: none;
     background-color: rgb(231, 235, 240);
-    /* box-shadow: 0px 2px 5px .5px gray; */
     height: 2.2em;
     width: 70%;
 }
@@ -119,49 +113,42 @@ svg{
 }
 
 .userNav{
-    box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    /* justify-content: flex-end; */
-    border: blue solid 1px;
-    /* width: 100%; */
-    /* max-height: 10em; */
     align-items: center;
-    justify-content: space-between;
-    /* justify-self: space-between; */
-    padding-right: 5em;
     min-width: fit-content;
+    padding-right: 5em;
     font-weight: bolder;
 }
 
 .profPic{
     border-radius: 50%;
     object-fit:cover;
-    /* padding: 0 1em; */
 }
 
 .userNav img{
     width: 4rem;
     height: 4rem;
+    margin: 0em 1em;
 }
 
 .botHeader{
     display: flex;
-    align-self: center;
+    align-self: flex-start;
     justify-content: space-between;
-    border: springgreen solid;
     padding-left: 2em;
 }
 
 .botHeader img{
-    width: 6rem;
-    height: 6rem;
+    width: 5.5rem;
+    height: 5.5rem;
 }
 
 .userMessage{
     display: flex;
     align-items: center;
     padding-left: 0em;
+    justify-content: baseline;
 }
 
 h1{
@@ -177,18 +164,17 @@ h2{
 .userAction{
     align-self: center;
     justify-content: center;
-    padding: 0em 1em;
+    padding-right: 3em;
 }
 
 button{
-    padding: 0em 1.5sem;
-    margin: 0em .6em;
-    width: 6em;
-    height: 2.5em;
-    font-size: 1em;
+    margin: 0em .9em;
+    width: 7em;
+    height: 2.8em;
+    font-size: .9em;
     border-radius: 19px;
     border: none;
-    background-color: #029fe2;
+    background-color: #26a4da;
     color: white;
     font-weight: bolder;
 }
@@ -200,60 +186,43 @@ button:hover{
 .main-content{
     grid-area: main-content;
     display: grid;
-    border: rgb(158, 0, 158) solid 2px;
     background-color:rgb(231, 235, 240);
     grid-template-columns: 1fr 350px;
     padding-top: 1em;
     padding-bottom: 2em;
-   /*  min-width:  100%;
-    min-height: 100%; */
-    /* min-height: 0; */
-    /* overflow: content; */
+    box-shadow: 1px -2px 1px 0px rgb(207, 197, 197);
 }
 
 .projects{
-    border: hotpink solid 1px;
     display:flex;
     flex-direction: column;
-    /* margin: 1em; */
     padding: 1em;
-    /* box-sizing: border-box; */
-    /* justify-content: stretch;
-    align-content: stretch; */
-    /* height: 100%; */
 }
 
 .projects h1{
-    /* grid-area: title; */
     margin-bottom: .8em;
     font-size: 1.3em;
 }
 
 .projectContent{
-    /* grid-area: projects; */
-    border: rgb(255, 167, 53) solid 1px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 2em;
-    /* overflow: content; */
     flex-grow: 1;
     border-radius: 10px;
 }
 
 .projectItem{
-    /* grid-area: project; */
     background-color: white;
- /*    min-width: 100%;
-    min-height: 100%; */
     border-radius: 10px;
-    box-shadow: 2px 2px 5px 1px rgb(100, 104, 117);
+    box-shadow: 2px 2px 5px 1px rgb(207, 197, 197);
     border-left: rgb(255, 199, 95) solid 9px;
-    /* max-width: 50em; */
     display: flex;
     flex-direction: column;
     padding: 2em 1em;
     line-height: 1.4em;
+    justify-content: space-between;
 }
 
 .projectItem h1{
@@ -264,21 +233,21 @@ button:hover{
 
 .projectItem p{
     color:rgb(156, 156, 156);
-    /* padding-left: 1em; */
+}
+
+.projectButtons{
+    align-self: flex-end;
+    
 }
 
 .sideContent{
     display: grid;
     box-sizing:border-box;
-    /* max-width: fit-content; */
-    /* grid-area: sideContent; */
 }
 
 .announcements{
     display: flex;
     flex-direction: column;
-   /*  border: rgb(247, 76, 76) solid 1px; */
-    
 }
 
 .announcements .title{
@@ -295,7 +264,7 @@ button:hover{
     flex-direction: column;
     margin: 1em;
     padding: 1em 1.9em;
-    box-shadow: 2px 2px 5px 1px rgb(100, 104, 117);
+    box-shadow: 2px 2px 5px 1px rgb(207, 197, 197);
 }
 
 .announcementItems{
@@ -305,7 +274,6 @@ button:hover{
     flex-direction: column;
     justify-content: center;
     margin-right: 1.2em;
-    /* border:rgba(3, 69, 150, 0.308) solid 1px; */
     line-height: 1.2em;
 }
 
@@ -326,14 +294,8 @@ button:hover{
 }
 
 .trending{
-    /* box-sizing: border-box; */
     display: flex;
     flex-direction: column;
-    /* padding: 2em; */
-    /* max-width: fit-content; */
-    /* border: lightseagreen solid 1px; */
-    /* margin: 1em; */
-    /* padding: 1em; */
 }
 
 .trending .title{
@@ -346,45 +308,30 @@ button:hover{
     flex-grow: .7;
     background-color: rgb(255, 253, 253);
     border-radius: 10px;
-/*     align-items: center;
-    /* justify-items: center; */
     display: flex;
     flex-direction: column;
     margin: 1em;
     padding: 1em 0em;
-    /* padding-left: 1em; */
-    /* max-width: fit-content; */
-    /* overflow: hidden; */
-    box-shadow: 2px 2px 5px 1px rgb(100, 104, 117);
+    box-shadow: 2px 2px 5px 1px rgb(207, 197, 197);
 }
 
 .trendingItems{
-/*     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; */
     flex-grow: .3;
     display: flex;
-    /* background-color: lavender; */
     align-items: center;
-    /* justify-content: center; */
-    /* margin: 1em; */
-    /* margin: 1em; */
     margin-left: 1.5em;
-/*     border: lightcoral solid 1px; */
     overflow: hidden;
 }
 
 .trendingText{
-    /* border: lightseagreen solid 1px; */
-    justify-items:stretch;
     display: flex;
     flex-direction: column;
-    /* max-height: max-content; */
+    line-height: 1.5em;
 }
 
 .trendingText h1{
     font-size: 1.1em;
-    font-weight:100;
+    font-weight: 100;
 }
 
 .trendingText p{
@@ -397,5 +344,4 @@ button:hover{
 .trendingItems img{
     height: 4rem;
     width: 4rem;
-    /* border: rgb(0, 0, 0) solid 1px; */
 }
